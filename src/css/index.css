@@ -1,18 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
 body {
-  max-width: 1100px;
   margin: 0 auto;
   position: relative;
 }
@@ -48,7 +34,7 @@ body {
 
 .header-nav-list li {
   width: auto;
-  padding: 0.8% 0.5% 0 0.5%;
+  padding: 1.2% 0.5% 0 0.5%;
 }
 
 .header-nav-list li:last-child {
@@ -80,6 +66,10 @@ body {
   left: 30%;
 }
 
+.content-head-tip .wel {
+  margin-top: 3%;
+}
+
 .content-head-carousel {
   width: 28.5%;
   overflow: hidden;
@@ -107,6 +97,7 @@ body {
 
 .content-head-carousel img {
   width: 100%;
+  display: inline-block;
 }
 
 .content-head-carousel .index {
@@ -116,27 +107,35 @@ body {
   left: 2%;
 }
 
-.content-head-carousel .index li{
+.content-head-carousel .index li {
   width: 8%;
   padding-bottom: 8%;
-  border: 1px solid #fff;
+  margin-right: 3%;
+  border: 0.3vw solid #fff;
+  background-color: #fff;
   display: inline-block;
 }
 
 .content-head-carousel .index li:hover {
   cursor: pointer;
-  background-color: #fff !important;
+  background-color: #3f1a84 !important;
 }
 
-.QRCode {
+.QRCode_Box {
   width: 12%;
   display: block;
-  position: absolute;
-  top:9%;
+  position: fixed;
+  top: 13%;
   right: 1%;
+  z-index: 100;
 }
 
-.content-main-list li{
+.QRCode_Box img {
+  width: 100%;
+  display: block;
+}
+
+.content-main-list li {
   position: relative;
 }
 
@@ -147,7 +146,8 @@ body {
 
 .content-main-list .info {
   width: 50%;
-  font-size: 0.8vw;
+  font-size: 1vw;
+  line-height: 150%;
   color: #fff;
   position: absolute;
 }
@@ -166,7 +166,7 @@ body {
   left: 39%;
 }
 
-#option4 .info{
+#option4 .info {
   top: 28%;
   left: 40%;
 }
@@ -188,11 +188,11 @@ body {
 }
 
 .content-main-list .info .left2 {
-  margin: 2% 0 0 -33%;
+  margin: 2% 0 0 -34%;
 }
 
 .content-main-list .info .left3 {
-  margin: 2% 0 0 -39%;
+  margin: 2% 0 0 -41%;
 }
 
 .content-main-list .info .right1 {
@@ -200,11 +200,11 @@ body {
 }
 
 .content-main-list .info .right2 {
-  margin: 5% 0 0 7%;
+  margin: 5% 0 0 9%;
 }
 
 .content-main-list .info .right3 {
-  margin: 2% 0 0 15%;
+  margin: 2% 0 0 21%;
 }
 
 #option4 .info .right1 {
@@ -224,8 +224,12 @@ body {
   position: absolute;
 }
 
-.tools li, .tools li a{
-  width: 100%;
+.tools li {
+  width: 30%;
+}
+
+.tools li:hover {
+  cursor: pointer;
 }
 
 .content-main-list li:nth-child(odd) .tools {
@@ -244,18 +248,22 @@ body {
 }
 
 .tools img {
-  width: 30%;
+  width: 100%;
+  display: block;
 }
 
 .tools .left1 {
   margin: 6% 0 0 -32%;
 }
+
 .tools .left2 {
   margin: 6% 0 0 -60%;
 }
+
 .tools .left3 {
   margin: 6% 0 0 -90%;
 }
+
 .tools .left4 {
   margin: 6% 0 0 -120%;
 }
@@ -263,12 +271,94 @@ body {
 .tools .right1 {
   margin: 6% 0 0 32%;
 }
+
 .tools .right2 {
   margin: 6% 0 0 60%;
 }
+
 .tools .right3 {
   margin: 6% 0 0 90%;
 }
+
 .tools .right4 {
   margin: 6% 0 0 120%;
+}
+
+/* dialog */
+.dialog-bg {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 998;
+  opacity: 0.5;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+}
+
+.dialog-box {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  width: 400px;
+  height: 200px;
+  z-index: 999;
+  background: #f1e9ff;
+  border-radius: 5px;
+  border: 1px solid #2f0080;
+}
+
+.dialog-top {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  color: #2f0080;
+  text-align: center;
+  border-bottom: 1px solid #2f0080;
+  font-weight: bold;
+}
+
+.dialog-middle {
+  height: 100px;
+}
+
+.dialog-middle p {
+  text-indent: 2em;
+  line-height: 24px;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.dialog-bottom {
+  width: 100%;
+  height: 40px;
+  line-height: 50px;
+  font-size: 18px;
+  color: #2f0080;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.dialog-bottom button {
+  width: 90px;
+  height: 26px;
+  line-height: 26px;
+  background: #2f0080;
+  border: 0 none;
+  color: #ffffff;
+  border-radius: 3px;
+  margin: 0 6px;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
 }

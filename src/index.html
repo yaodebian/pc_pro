@@ -3,9 +3,11 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>三国杀</title>
+  <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/index.css">
 </head>
 
@@ -13,21 +15,23 @@
   <header id="header">
     <nav class="header-nav">
       <ul class="header-nav-list">
-        <li><a href="###">官网</a></li>
+        <li><a target="_blank" href="http://m.sanguosha.com">官网</a></li>
         <li>|</li>
-        <li><a href="###">论坛</a></li>
+        <li><a target="_blank" href="http://myclub.sanguosha.com">论坛</a></li>
         <li>|</li>
-        <li><a href="###">登录</a></li>
+        <li><a target="_blank" href="style/common.css">登录</a></li>
       </ul>
     </nav>
   </header>
   <section id="content">
     <header class="content-head">
       <img class="content-head-img" src="./img/bg_01.jpg"></img>
-      <img class="QRCode" src="./img/float_bg.jpg" alt="">
+      <div class="QRCode_Box">
+        <a target="_blank" href="http://www.pgyer.com/sanguosha"><img src="./img/float_bg.jpg" alt=""></a>
+      </div>
       <div class="content-head-tip">
-        <p>活动时间：12月30日-12月30日</p>
-        <p>欢迎登录：admin</p>
+        <p class="time">活动时间：12月30日-12月30日</p>
+        <p class="wel">欢迎登录：admin</p>
       </div>
       <div class="content-head-carousel">
         <ul class="list">
@@ -42,10 +46,7 @@
           </li>
         </ul>
         <ul class="index">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li></li><li></li><li></li><li></li>
         </ul>
       </div>
     </header>
@@ -57,15 +58,16 @@
             <ul class="info">
               <li class="title">回归游戏送武将！</li>
               <li class="left1">&emsp;&emsp;离开三国的这些日子是否有些寂寞？三国杀手游四岁了，感谢你曾经的陪伴。</li>
-              <li class="left2">&emsp;&emsp;2015年1月1日至今，未登陆国三国杀手游且校色等级大于等于85级(原40级)的用户，可免费领取：招募令x5、雁翎甲x10、多多益善x30、专属武将朱灵！</li>
+              <li class="left2">
+                &emsp;&emsp;2015年1月1日至今，未登陆国三国杀手游且校色等级大于等于85级(原40级)的用户，可免费领取：招募令x5、雁翎甲x10、多多益善x30、专属武将朱灵！</li>
               <li class="left3">领取成功后，请登录游戏到系统邮件中查看。</li>
             </ul>
             <ul class="tools">
-              <li><a href="###"><img src="img/1/01.png" alt=""></a></li>
-              <li class="left1"><a href="###"><img src="img/1/02.png" alt=""></a></li>
-              <li class="left2"><a href="###"><img src="img/1/03.png" alt=""></a></li>
-              <li class="left3"><a href="###"><img src="img/1/04.png" alt=""></a></li>
-              <li class="left4"><a href="###"><img src="img/all.png" alt=""></a></li>
+              <li class="tool-item" data-id="1_1"><img src="img/1/01.png" alt=""></li>
+              <li class="left1 tool-item" data-id="1_2"><img src="img/1/02.png" alt=""></li>
+              <li class="left2 tool-item" data-id="1_3"><img src="img/1/03.png" alt=""></li>
+              <li class="left3 tool-item" data-id="1_4"><img src="img/1/04.png" alt=""></li>
+              <li class="left4 tool-item" data-id="1_5"><img src="img/all.png" alt=""></li>
             </ul>
           </div>
         </li>
@@ -75,15 +77,17 @@
             <ul class="info">
               <li class="title">忠实玩家感恩回馈</li>
               <li class="right1">无论你的三国杀旅程何时开始，我们都深深记得。</li>
-              <li class="right2">&emsp;&emsp;游戏账号(包括盛大通行证)注册时间在2014年6月30日及以前且游戏角色大于等于100级(原48级)的用户，可免费领取：招募令x5、雁翎甲x10、多多益善x30、娇花照水*甄姬。</li>
+              <li class="right2">
+                &emsp;&emsp;游戏账号(包括盛大通行证)注册时间在2014年6月30日及以前且游戏角色大于等于100级(原48级)的用户，可免费领取：招募令x5、雁翎甲x10、多多益善x30、娇花照水*甄姬。
+              </li>
               <li class="right3">&emsp;&emsp;小tips：不记得自己游戏开始时间可以看下“初出茅庐”战功的获得日期哦！</li>
             </ul>
             <ul class="tools">
-              <li><a href="###"><img src="img/2/01.png" alt=""></a></li>
-              <li class="right1"><a href="###"><img src="img/2/02.png" alt=""></a></li>
-              <li class="right2"><a href="###"><img src="img/2/03.png" alt=""></a></li>
-              <li class="right3"><a href="###"><img src="img/2/04.png" alt=""></a></li>
-              <li class="right4"><a href="###"><img src="img/all.png" alt=""></a></li>
+              <li class="tool-item" data-id="2_1"><img src="img/2/01.png" alt=""></li>
+              <li class="right1 tool-item" data-id="2_2"><img src="img/2/02.png" alt=""></li>
+              <li class="right2 tool-item" data-id="2_3"><img src="img/2/03.png" alt=""></li>
+              <li class="right3 tool-item" data-id="2_4"><img src="img/2/04.png" alt=""></li>
+              <li class="right4 tool-item" data-id="2_5"><img src="img/all.png" alt=""></li>
             </ul>
           </div>
         </li>
@@ -97,9 +101,9 @@
               <li class="left3">领取成功后，请登录游戏到系统邮件中查看。</li>
             </ul>
             <ul class="tools">
-              <li><a href="###"><img src="img/3/01.png" alt=""></a></li>
-              <li class="left1"><a href="###"><img src="img/3/02.png" alt=""></a></li>
-              <li class="left2"><a href="###"><img src="img/3/03.png" alt=""></a></li>
+              <li class="tool-item" data-id="3_1"><img src="img/3/01.png" alt=""></li>
+              <li class="left1 tool-item" data-id="3_2"><img src="img/3/02.png" alt=""></li>
+              <li class="left2 tool-item" data-id="3_3"><img src="img/3/03.png" alt=""></li>
             </ul>
           </div>
         </li>
@@ -113,9 +117,9 @@
               <li class="right3">领取成功后，请登录游戏到系统邮件中查看。</li>
             </ul>
             <ul class="tools">
-              <li><a href="###"><img src="img/4/01.png" alt=""></a></li>
-              <li class="right1"><a href="###"><img src="img/4/02.png" alt=""></a></li>
-              <li class="right2"><a href="###"><img src="img/all.png" alt=""></a></li>
+              <li class="tool-item" data-id="4_1" href="###"><img src="img/4/01.png" alt=""></li>
+              <li class="right1 tool-item" data-id="4_2"><img src="img/4/02.png" alt=""></li>
+              <li class="right2 tool-item" data-id="4_3"><img src="img/all.png" alt=""></li>
             </ul>
           </div>
         </li>
@@ -125,10 +129,24 @@
   <footer>
 
   </footer>
+  <!-- dialog -->
+  <div class="dialog-box dialog-tip hide">
+    <div class="dialog-top">提示</div>
+    <div class="dialog-middle">
+      <p class="dialog-text"></p>
+    </div>
+    <div class="dialog-bottom">
+      <button type="button" class="confirm">确定</button>
+    </div>
+  </div>
+  <!-- 背景 -->
+  <div class="dialog-bg hide"></div>
 </body>
+<script src="js/ajax.js"></script>
 <script src="js/lib/jquery-3.3.1.min.js"></script>
 <script src="js/lib/assign.js"></script>
 <script src="js/lib/debounce.js"></script>
+<script src="js/testdata.js"></script>
 <script src="js/index.js"></script>
 
 </html>
