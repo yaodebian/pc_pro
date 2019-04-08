@@ -135,12 +135,6 @@
         that.isAuto = true
       }
     })
-    /**
-     * 监听浏览器窗口大小的变化
-     */
-    $(window).resize(debounce(function () {
-      window.location.reload()
-    }, 500))
   }
 
   /**
@@ -158,10 +152,10 @@
   }
 
   let carousel = new Carousel({
-    con: '.content-head-carousel', // 轮播器容器
+    con: '.carousel', // 轮播器容器
     carouBody: '.list', // 轮播条
     carouIndex: '.index li', // 轮播序
-    size: parseFloat($('.content-head-carousel .list li').eq(0).css('width')), // 每张轮播器图片的宽度
+    size: parseFloat($('.carousel .list li').eq(0).css('width')), // 每张轮播器图片的宽度
     count: 4, // 轮播图片数量
     index: 0, // 轮播当前位置
     isSwipe: false, // 轮播当前是否在滚动
@@ -179,53 +173,11 @@
 
   /* dialog */
   let dialog_bg = $('.dialog-bg')
-  let option = $('.content-main-list')
-  let option1 = $('#option1')
-  let option2 = $('#option2')
-  let option3 = $('#option3')
-  let option4 = $('#option4')
-
-  // 将道具设置为已获取状态
-  function toolGotten (tag) {
-    switch (tag) {
-      case '1':
-        {
-          let items = $('#option1 .tool-item img')
-          items.eq(0).attr('src', 'img/1/01_gray.png')
-          items.eq(1).attr('src', 'img/1/02_gray.png')
-          items.eq(2).attr('src', 'img/1/03_gray.png')
-          items.eq(3).attr('src', 'img/1/04_gray.png')
-          items.eq(4).attr('src', 'img/all_gray.png')
-        }
-        break
-      case '2':
-        {
-          let items = $('#option2 .tool-item img')
-          items.eq(0).attr('src', 'img/2/01_gray.png')
-          items.eq(1).attr('src', 'img/2/02_gray.png')
-          items.eq(2).attr('src', 'img/2/03_gray.png')
-          items.eq(3).attr('src', 'img/2/04_gray.png')
-          items.eq(4).attr('src', 'img/all_gray.png')
-        }
-        break
-      case '3':
-        {
-          let items = $('#option3 .tool-item img')
-          items.eq(0).attr('src', 'img/3/01_gray.png')
-          items.eq(1).attr('src', 'img/3/02_gray.png')
-          items.eq(2).attr('src', 'img/3/03_gray.png')
-        }
-        break
-      case '4':
-        {
-          let items = $('#option4 .tool-item img')
-          items.eq(0).attr('src', 'img/4/01_gray.png')
-          items.eq(1).attr('src', 'img/4/02_gray.png')
-          items.eq(2).attr('src', 'img/all_gray.png')
-        }
-        break
-    }
-  }
+  let option = $('.wrapper')
+  let option1 = $('#column2')
+  let option2 = $('#column3')
+  let option3 = $('#column4')
+  let option4 = $('#column5')
 
   // 活动关闭
   $('.confirm').on('click', function () {
@@ -240,9 +192,8 @@
 
   // 道具点击获取
   option.find('.tool-item').on('click', function () {
-    let imgStr = $(this).find('img').eq(0).attr('src')
-    console.log(imgStr)
-    if (imgStr.indexOf('gray') > -1) {
+    let isGotten = $(this).hasClass('gray')
+    if (isGotten) {
       $('.dialog-text').text('亲，道具已经领取过了哦，请在您的邮箱中查看')
       $('.dialog-box').show()
       dialog_bg.show()
@@ -259,13 +210,13 @@
     let all
     let url = oPageConfig.oPageUrl.optionUrl[tag]
     if (tag === '1') {
-      all = option1.find('.toolItem')
+      all = option1.find('.tool-item')
     } else if (tag === '2') {
-      all = option2.find('.toolItem')
+      all = option2.find('.tool-item')
     } else if (tag === '3') {
-      all = option3.find('.toolItem')
+      all = option3.find('.tool-item')
     } else if (tag === '4') {
-      all = option4.find('.toolItem')
+      all = option4.find('.tool-item')
     }
     // 弹出确定框
     $.ajax({
@@ -274,7 +225,7 @@
     }).done(function (msg) {
       var text = msg.data.single_text
       if (msg.code === '0') {
-        toolGotten(tag)
+        all.addClass('gray')
         $('.dialog-text').text(text)
         $('.dialog-box').show()
         dialog_bg.show()

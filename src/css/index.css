@@ -1,287 +1,415 @@
-body {
+.QRCode_Box {
+  width: 166px;
+  height: 272px;
+  background: url('../img/float_bg.jpg') no-repeat;
+  background-size: 100%;
+  display: block;
+  position: fixed;
+  top: 90px;
+  right: 15px;
+  z-index: 100;
+}
+
+.wrapper {
+  width: 1000px;
   margin: 0 auto;
   position: relative;
 }
 
-#header {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+.column {
+  min-width: 1000px;
 }
 
-.header-nav {
+#column1 {
+  background: url("../img/bg_01.jpg") top center no-repeat;
+  background-size: cover;
   width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
+  height: 978px;
+  overflow: hidden;
 }
 
-.header-nav-list {
+.nav {
+  width: 90%;
+}
+
+.nav-list {
   width: 100%;
-  font-size: 1.5vw;
+  font-size: 25px;
   color: #fff;
   display: flex;
   justify-content: flex-end;
 }
 
-.header-nav-list a {
-  width: auto;
+.nav-list a {
   color: #fff;
-  display: block;
 }
 
-.header-nav-list li {
-  width: auto;
-  padding: 1.2% 0.5% 0 0.5%;
+.nav-list li {
+  padding-top: 25px;
 }
 
-.header-nav-list li:last-child {
-  margin-right: 20%;
+.nav-list li:after {
+  color: #fff;
+  content: '|';
+  font-size: 24px;
+  padding: 0 10px;
 }
 
-.header-nav-list li:first-child {
-  border-left: none;
+.nav-list li:last-child:after {
+  content: '';
 }
 
-.header-nav-list li:nth-child(odd) a:hover {
+.nav-list li a:hover {
+  cursor: pointer;
   color: #fd6363;
 }
 
-.content-head {
-  position: relative;
-}
-
-.content-head-img {
-  width: 100%;
-  display: block;
-}
-
-.content-head-tip {
-  font-size: 1.3vw;
+.column1-tip {
   color: #fff;
+  font-size: 25px;
   position: absolute;
-  top: 44%;
-  left: 30%;
+  top: 440px;
+  left: 150px;
 }
 
-.content-head-tip .wel {
-  margin-top: 3%;
+.column1-tip-time {
+  padding-bottom: 5px;
 }
 
-.content-head-carousel {
-  width: 28.5%;
+.carousel {
+  width: 527px;
+  height: 383px;
   overflow: hidden;
   position: absolute;
-  top: 54.4%;
-  left: 26%;
+  top: 535px;
+  left: 50px;
 }
 
-.content-head-carousel .list {
+.carousel .list {
   width: 400%;
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.content-head-carousel .list li {
+.carousel .list li {
   width: 25%;
   display: inline-block;
 }
 
-.content-head-carousel .list li a {
+.carousel .list li a {
   width: 100%;
   display: block;
 }
 
-.content-head-carousel img {
+.carousel img {
   width: 100%;
   display: inline-block;
 }
 
-.content-head-carousel .index {
-  width: 100%;
+.carousel .index {
   position: absolute;
-  top: 2%;
-  left: 2%;
+  right: 5px;
+  bottom: 5px;
 }
 
-.content-head-carousel .index li {
-  width: 8%;
-  padding-bottom: 8%;
-  margin-right: 3%;
-  border: 0.3vw solid #fff;
+.carousel .index li {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border: 3px solid #fff;
   background-color: #fff;
   display: inline-block;
 }
 
-.content-head-carousel .index li:hover {
+.carousel .index li:hover {
   cursor: pointer;
   background-color: #3f1a84 !important;
 }
 
-.QRCode_Box {
-  width: 12%;
-  display: block;
-  position: fixed;
-  top: 13%;
-  right: 1%;
-  z-index: 100;
-}
-
-.QRCode_Box img {
+#column2 {
+  background: url("../img/bg_02.jpg") top center no-repeat;
+  background-size: cover;
   width: 100%;
-  display: block;
+  height: 1198px;
+  overflow: hidden;
 }
 
-.content-main-list li {
-  position: relative;
-}
-
-.content-main-list img {
+#column3 {
+  background: url("../img/bg_03.jpg") top center no-repeat;
+  background-size: cover;
   width: 100%;
-  display: block;
+  height: 1218px;
+  overflow: hidden;
 }
 
-.content-main-list .info {
-  width: 50%;
-  font-size: 1vw;
-  line-height: 150%;
+#column4 {
+  background: url("../img/bg_04.jpg") top center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 1194px;
+  overflow: hidden;
+}
+
+#column5 {
+  background: url("../img/bg_05.jpg") top center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 1627px;
+  overflow: hidden;
+}
+
+.wrapper .info {
+  font-size: 15px;
+  line-height: 1.5;
   color: #fff;
   position: absolute;
 }
 
-.content-main-list .info .title {
-  font-size: 1.7vw;
+.wrapper .info .title {
+  font-size: 35px;
 }
 
-.content-main-list li:nth-child(odd) .info {
-  top: 34%;
-  left: 48%;
+#column2 .info {
+  top: 390px;
+  left: 550px;
 }
 
-.content-main-list li:nth-child(2) .info {
-  top: 33%;
-  left: 39%;
+#column3 .info {
+  top: 380px;
+  left: 240px;
 }
 
-#option4 .info {
-  top: 28%;
-  left: 40%;
+#column4 .info {
+  top: 380px;
+  left: 580px;
 }
 
-.content-main-list li:nth-child(odd) .info li {
-  width: 52%;
+#column5 .info {
+  top: 480px;
+  left: 380px;
 }
 
-.content-main-list li:nth-child(2) .info li {
-  width: 50%;
+#column2 .info li {
+  width: 400px;
 }
 
-#option4 .info li {
-  width: 53.5%;
+#column3 .info li {
+  width: 400px;
 }
 
-.content-main-list .info .left1 {
-  margin: 10% 0 0 -27%;
+#column4 .info li {
+  width: 400px;
 }
 
-.content-main-list .info .left2 {
-  margin: 2% 0 0 -34%;
+#column5 .info li {
+  width: 400px;
 }
 
-.content-main-list .info .left3 {
-  margin: 2% 0 0 -41%;
+.wrapper .info .left1 {
+  margin: 50px 0 0 -250px;
 }
 
-.content-main-list .info .right1 {
-  margin: 7% 0 0 6%;
+.wrapper .info .left2 {
+  margin: 20px 0 0 -330px;
 }
 
-.content-main-list .info .right2 {
-  margin: 5% 0 0 9%;
+.wrapper .info .left3 {
+  margin: 20px 0 0 -400px;
 }
 
-.content-main-list .info .right3 {
-  margin: 2% 0 0 21%;
+.wrapper .info .right1 {
+  margin: 50px 0 0 50px;
 }
 
-#option4 .info .right1 {
-  margin: 5% 0 0 6%;
+.wrapper .info .right2 {
+  margin: 20px 0 0 100px;
 }
 
-#option4 .info .right2 {
-  margin: 2% 0 0 9%;
+.wrapper .info .right3 {
+  margin: 20px 0 0 170px;
 }
 
-#option4 .info .right3 {
-  margin: 5% 0 0 26%;
+/* 道具有色 */
+#column2 .tools li:nth-child(1) {
+  background: url("../img/1/01.png") no-repeat;
+}
+#column2 .tools li:nth-child(2) {
+  background: url("../img/1/02.png") no-repeat;
+}
+#column2 .tools li:nth-child(3) {
+  background: url("../img/1/03.png") no-repeat;
+}
+#column2 .tools li:nth-child(4) {
+  background: url("../img/1/04.png") no-repeat;
+}
+#column2 .tools li:nth-child(5) {
+  background: url("../img/all.png") no-repeat;
 }
 
-.tools {
-  width: 20%;
-  position: absolute;
+#column3 .tools li:nth-child(1) {
+  background: url("../img/2/01.png") no-repeat;
+}
+#column3 .tools li:nth-child(2) {
+  background: url("../img/2/02.png") no-repeat;
+}
+#column3 .tools li:nth-child(3) {
+  background: url("../img/2/03.png") no-repeat;
+}
+#column3 .tools li:nth-child(4) {
+  background: url("../img/2/04.png") no-repeat;
+}
+#column3 .tools li:nth-child(5) {
+  background: url("../img/all.png") no-repeat;
 }
 
-.tools li {
-  width: 30%;
+#column4 .tools li:nth-child(1) {
+  background: url("../img/3/01.png") no-repeat;
+}
+#column4 .tools li:nth-child(2) {
+  background: url("../img/3/02.png") no-repeat;
+}
+#column4 .tools li:nth-child(3) {
+  background: url("../img/3/03.png") no-repeat;
 }
 
-.tools li:hover {
+#column5 .tools li:nth-child(1) {
+  background: url("../img/4/01.png") no-repeat;
+}
+#column5 .tools li:nth-child(2) {
+  background: url("../img/4/02.png") no-repeat;
+}
+#column5 .tools li:nth-child(3) {
+  background: url("../img/all.png") no-repeat;
+}
+
+/* 道具灰色 */
+#column2 .tools li:nth-child(1).gray {
+  background: url("../img/1/01_gray.png") no-repeat;
+}
+#column2 .tools li:nth-child(2).gray {
+  background: url("../img/1/02_gray.png") no-repeat;
+}
+#column2 .tools li:nth-child(3).gray {
+  background: url("../img/1/03_gray.png") no-repeat;
+}
+#column2 .tools li:nth-child(4).gray {
+  background: url("../img/1/04_gray.png") no-repeat;
+}
+#column2 .tools li:nth-child(5).gray {
+  background: url("../img/all_gray.png") no-repeat;
+}
+
+#column3 .tools li:nth-child(1).gray {
+  background: url("../img/2/01_gray.png") no-repeat;
+}
+#column3 .tools li:nth-child(2).gray {
+  background: url("../img/2/02_gray.png") no-repeat;
+}
+#column3 .tools li:nth-child(3).gray {
+  background: url("../img/2/03_gray.png") no-repeat;
+}
+#column3 .tools li:nth-child(4).gray {
+  background: url("../img/2/04_gray.png") no-repeat;
+}
+#column3 .tools li:nth-child(5).gray {
+  background: url("../img/all_gray.png") no-repeat;
+}
+
+#column4 .tools li:nth-child(1).gray {
+  background: url("../img/3/01_gray.png") no-repeat;
+}
+#column4 .tools li:nth-child(2).gray {
+  background: url("../img/3/02_gray.png") no-repeat;
+}
+#column4 .tools li:nth-child(3).gray {
+  background: url("../img/3/03_gray.png") no-repeat;
+}
+
+#column5 .tools li:nth-child(1).gray {
+  background: url("../img/4/01_gray.png") no-repeat;
+}
+#column5 .tools li:nth-child(2).gray {
+  background: url("../img/4/02_gray.png") no-repeat;
+}
+#column5 .tools li:nth-child(3).gray {
+  background: url("../img/all_gray.png") no-repeat;
+}
+
+.wrapper .tools li {
+  width: 120px;
+  height: 88px;
+  background-size: 100% !important;
+}
+
+.wrapper .tools li:hover {
   cursor: pointer;
 }
 
-.content-main-list li:nth-child(odd) .tools {
-  top: 38%;
-  right: 14%;
+.wrapper .tools li:last-child {
+  width: 166px;
+  height: 134px;
 }
 
-.content-main-list li:nth-child(2) .tools {
-  top: 35%;
-  left: 26%;
+#column4 .tools li:last-child {
+  width: 120px;
+  height: 88px;
 }
 
-#option4 .tools {
-  top: 29%;
-  left: 30%;
+.wrapper .tools {
+  position: absolute;
 }
 
-.tools img {
-  width: 100%;
-  display: block;
+#column2 .tools {
+  top: 430px;
+  left: 830px;
 }
 
-.tools .left1 {
-  margin: 6% 0 0 -32%;
+#column3 .tools {
+  top: 400px;
+  left: 20px;
 }
 
-.tools .left2 {
-  margin: 6% 0 0 -60%;
+#column4 .tools {
+  top: 440px;
+  left: 790px;
 }
 
-.tools .left3 {
-  margin: 6% 0 0 -90%;
+#column5 .tools {
+  top: 550px;
+  left: 200px;
 }
 
-.tools .left4 {
-  margin: 6% 0 0 -120%;
+.wrapper .tools .left1 {
+  margin: 20px 0 0 -120px;
 }
 
-.tools .right1 {
-  margin: 6% 0 0 32%;
+.wrapper .tools .left2 {
+  margin: 20px 0 0 -230px;
 }
 
-.tools .right2 {
-  margin: 6% 0 0 60%;
+.wrapper .tools .left3 {
+  margin: 20px 0 0 -350px;
 }
 
-.tools .right3 {
-  margin: 6% 0 0 90%;
+.wrapper .tools .left4 {
+  margin: 20px 0 0 -490px;
 }
 
-.tools .right4 {
-  margin: 6% 0 0 120%;
+.wrapper .tools .right1 {
+  margin: 20px 0 0 130px;
+}
+
+.wrapper .tools .right2 {
+  margin: 20px 0 0 250px;
+}
+
+.wrapper .tools .right3 {
+  margin: 20px 0 0 360px;
+}
+
+.wrapper .tools .right4 {
+  margin: 20px 0 0 460px;
 }
 
 /* dialog */
