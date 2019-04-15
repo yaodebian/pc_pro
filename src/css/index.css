@@ -157,6 +157,7 @@
   width: 100%;
   height: 1627px;
   overflow: hidden;
+  position: relative;
 }
 
 .wrapper .info {
